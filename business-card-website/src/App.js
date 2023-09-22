@@ -12,10 +12,10 @@ function App() {
     <div className="App">
       <div className={`business-card ${isFlipped ? 'flipped' : ''}`} onClick={flipCard}>
         <div className="front">
-          <img src="/front-image.png" alt="Front of Business Card" />
+          <img src="images/front-image.png" alt="Front of Business Card" />
         </div>
         <div className="back">
-          <img src="/back-image.png" alt="Front of Business Card" />
+          <img src="images/back-image.png" alt="Back of Business Card" />
         </div>
       </div>
     </div>
