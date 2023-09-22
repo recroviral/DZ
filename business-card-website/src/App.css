@@ -11,6 +11,7 @@
   height: 600px; /* Adjust the card size as needed */
   perspective: 1000px;
   cursor: pointer;
+  transition: transform 0.5s;
 }
 
 .business-card div {
@@ -22,24 +23,46 @@
   justify-content: center;
   align-items: center;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Elevation effect */
-  border-radius: 10px; /* Rounded corners */
+  border-radius: 60px; /* Rounded corners */
   transition: transform 0.5s;
 }
 
-.front {
-  background-color: #ccc; /* Set your front card color here */
+.card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+  border-radius: 60px;
 }
 
+.front,
 .back {
-  background-color: #ccc; /* Set your back card color here */
-  transform: rotateY(180deg);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 60px;
+  transform: rotateY(0deg);
+  transition: opacity 0.5s;
 }
 
-.business-card.flipped {
-  transform: rotateY(180deg);
+.hidden {
+  opacity: 0;
 }
 
 .front img {
-  width: 1050px;
-  height: 600px;
+  width: 100%;
+  height: 100%;
+  border-radius: 60px
+}
+
+.back img {
+  width: 100%;
+  height: 100%;
+  border-radius: 60px
 }
